@@ -1,14 +1,14 @@
 Package.describe({
     summary: "Make signin and signout their own pages with routes.",
-    version: '1.1.0',
+    version: '1.1.1',
     name: "oaf:accounts-entry",
     githubUrl: 'https://github.com/oafmedium/accounts-entry',
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom("METEOR@0.9.0");
+  api.versionsFrom("METEOR@1.0.1");
 
-  api.use(['iron:router@1.0.0', 'softwarerero:accounts-t9n@1.0.0', 'joshowens:simple-form@0.1.8'], ['client', 'server']);
+  api.use(['iron:router@1.0.3', 'softwarerero:accounts-t9n@1.0.3', 'joshowens:simple-form@0.2.2'], ['client', 'server']);
   // CLIENT
   api.use([
     'deps',
@@ -88,8 +88,8 @@ Package.onTest(function (api) {
             'mongo-livedata',
             'coffeescript'
             ]);
-  api.use(['iron:router', 'softwarerero:accounts-t9n', 'joshowens:simple-form'], ['client', 'server']);
-  api.use('joshowens:accounts-entry');
+  api.use(['iron:router@1.0.3', 'softwarerero:accounts-t9n@1.0.3', 'joshowens:simple-form@0.2.2'], ['client', 'server']);
+  api.use('oaf:accounts-entry');
 
   api.addFiles(['tests/route.coffee', 'tests/client.html', 'tests/client.coffee'], 'client');
 });
