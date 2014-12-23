@@ -3,7 +3,7 @@ layout: default
 username: oafmedium
 repo: accounts-entry
 desc: Meteor sign up and sign in pages.
-version: 1.1.2
+version: 1.1.3
 
 ---
 

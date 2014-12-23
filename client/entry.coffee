@@ -44,6 +44,7 @@ AccountsEntry =
         Session.set('fromWhere', router.url)
         Router.go('/sign-in')
         Session.set('entryError', t9n('error.signInRequired'))
+        router.next()
 
 @AccountsEntry = AccountsEntry
 
